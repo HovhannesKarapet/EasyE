@@ -1,0 +1,31 @@
+.container-fluid{
+  position: relative;
+  top: 150px;
+  background-image: url("../../../assets/l.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.side-menu{
+  margin-top: 5px;
+}
+hr{
+  margin: 7px;
+}
+
+.btn{
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 0;
+  white-space: nowrap;
+  background: #1B1B1B;
+  border-radius: 0;
+  color: white;
+  outline: 0;
+}
+.btn:not([disabled]):hover {
+  background: #505050;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}

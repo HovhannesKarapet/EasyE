@@ -1,0 +1,58 @@
+.container{
+  margin-top: 5px;
+  margin-bottom: 150px;
+  padding: 10px;
+  box-shadow: 0 0 10px #000000af;
+}
+.btn{
+  margin-bottom: 5px;
+  white-space: nowrap;
+  background: #1B1B1B;
+  border-radius: 0;
+  color: white;
+  outline: 0;
+}
+.btn:not([disabled]):hover {
+  background: #505050;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.close, audio{
+  outline: 0;
+}
+h3, h5{
+  font-weight: 400;
+  margin: 0;
+  padding: 10px;
+}
+hr{
+  width: 80%;
+  background-color: #1B1B1B;
+}
+h5{
+  border-bottom:1px solid #515769;
+  padding: 15px 10px;
+  margin: 0;
+}
+input[type=radio]{
+  display: none;
+}
+label{
+  display: block;
+  margin: 0;
+  padding: 5px 15px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+input+label{
+  width: 80%;
+  margin: auto;
+}
+input[type="radio"]:hover:not([disabled])+label{
+  border-bottom: 1px solid #c2c2c2;
+}
+input[type="radio"]:checked:not([hover])+label{
+  border-bottom: 1px solid #1B1B1B;
+}

@@ -1,0 +1,52 @@
+.container-fluid{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/rp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form{
+  position: relative;
+  top: 150px;
+}
+.btn{
+  white-space: nowrap;
+  background: #1B1B1B;
+  border-radius: 0;
+  color: white;
+  margin-top: 5px;
+}
+.btn:not([disabled]):hover {
+  background: white;
+  color: #1B1B1B;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.danger{
+  width: 20px;
+  display: inline;
+}
+input{
+  margin: 5px;
+  border-radius: 0;
+}
+h2{
+  color: #515769;
+}
+p{
+  color: #515769;
+  display: inline-block;
+  margin-left: 5px;
+}
+span{
+  position: relative;
+  display: block;
+}
+@media only screen and (max-width: 576px){
+  span{
+    text-align: center;
+  }
+}

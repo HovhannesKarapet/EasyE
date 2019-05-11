@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div *ngFor="let question of questions; let i = index">
+            <h5>{{question.question}}</h5>
+            <input type="radio" id="{{i}}.1" formControlName="question{{i}}" value="{{question.answer1}}" [attr.disabled]="flag"><label for="{{i}}.1">{{question.answer1}}</label>
+            <input type="radio" id="{{i}}.2" formControlName="question{{i}}" value="{{question.answer2}}" [attr.disabled]="flag"><label for="{{i}}.2">{{question.answer2}}</label>
+            <input type="radio" id="{{i}}.3" formControlName="question{{i}}" value="{{question.answer3}}" [attr.disabled]="flag"><label for="{{i}}.3">{{question.answer3}}</label>
+          </div>
+          <hr>
+          <div class="count text-center" *ngIf="flag">
+            <h3>Rigth Answers: {{count}} of {{questions.length}}</h3>
+            <hr>
+          </div>
+          <div class="footer text-center">
+            <button type="submit" class="btn" [disabled]="flag">Finish</button>
+            <br>
+            <button type="button" class="btn" *ngIf="flag" (click)="rightAnswers()">Show Right Answers</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+.navb{
+  position: absolute;
+  z-index: 10000;
+  background: rgba(27, 27, 27, 0.71);
+}
+.logo img{
+  width: 75px;
+  padding: 2px;
+}
+p{
+  display: inline-block;
+  margin-left: 5px;
+  white-space: nowrap;
+  color: white;
+}
+.log{
+  padding: 5px 15px 5px 5px;
+  text-align: right;
+  line-height: 75px;
+}
+.btn{
+  white-space: nowrap;
+  background: #1B1B1B;
+  border-radius: 0;
+  color: white;
+  border: 1px solid #505050;
+}
+.btn:not([disabled]):hover {
+  background: white;
+  color: #1B1B1B;
+}
+.btn:focus {
+  outline: 0;
+   box-shadow: none;
+}
+.close{
+  outline: 0;
+}
+span{
+  position: relative;
+  display: block;
+}
+.danger{
+  width: 20px;
+  display: inline;
+  position: absolute;
+  left: 2.5%;
+  top: 30%;
+}
+input{
+  margin: 5px auto;
+  display: inline-block;
+  width: 80%;
+  border-radius: 0;
+}
+a{
+  margin-top: 10px;
+  display: block;
+  color: #1B1B1B;
+}
+.modal-content{
+  border-radius: 0;
+  background: #f1f2f5;
+}

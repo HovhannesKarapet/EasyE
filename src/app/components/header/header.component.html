@@ -1,0 +1,43 @@
+<div class="container-fluid navb">
+  <div class="row">
+    <div class="col-4 offset-1 logo">
+      <img src="../../../assets/book.png" class="img-fluid">
+      <p>Easy E</p>
+    </div>
+    <div class="col-4 offset-3 col-sm-3 offset-sm-4 col-md-2 offset-md-5 log">
+      <button type="button" class="btn" data-toggle="modal" data-target="#log" *ngIf="!authService.isLoggedIn">
+        Sing in
+      </button>
+      <button class="btn" *ngIf="authService.isLoggedIn" (click)="onSingout()">Sing out</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="log" tabindex="-1" role="dialog" aria-labelledby="log" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Sing in</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <form [formGroup]="singIn">
+          <span>
+            <img src="../../../assets/danger.png" class="danger img-fluid" *ngIf="singIn.get('login').touched && singIn.get('login').invalid">
+            <input type="text" class="form-control" formControlName="login" placeholder="Login">
+          </span>
+          <span>
+            <img src="../../../assets/danger.png" class="danger img-fluid"  *ngIf="singIn.get('pass').touched && singIn.get('pass').invalid">
+            <input type="password" class="form-control" formControlName="pass" placeholder="Password">
+          </span>
+          <button (click)="onSingin()" class="btn" [disabled]="singIn.invalid">Sing in</button>
+        </form>
+        <a routerLink="/registration" data-dismiss="modal">Registration</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.container{
+  margin-top: 5px;
+  margin-bottom: 150px;
+  padding: 10px;
+  box-shadow: 0 0 10px #000000af;
+}
+.btn{
+  width: 100%;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  background: #1B1B1B;
+  border-radius: 0;
+  color: white;
+  outline: 0;
+}
+.btn:not([disabled]):hover {
+  background: #505050;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.close, audio{
+  outline: 0;
+}
+h5, p{
+  color: #515769;
+}

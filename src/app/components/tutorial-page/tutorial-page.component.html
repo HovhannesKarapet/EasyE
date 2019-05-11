@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 text-center">
+      <div class="side-menu" *ngFor="let tutorial of tutorials; let i = index">
+        <a class="btn" routerLink="lesson{{i+1}}" [queryParams]="{id: i + 1}" [class.disabled]="!auth[i]">
+          Level {{i + 1}}
+        </a>
+        <a class="btn" routerLink="test{{i+1}}" [queryParams]="{id: i + 1}" [class.disabled]="!auth[i]">
+          Test {{i + 1}}
+        </a>
+        <hr>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

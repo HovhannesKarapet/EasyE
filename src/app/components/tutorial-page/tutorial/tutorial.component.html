@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let lesson of lessons, let i = index">
+      <button type="button" class="btn" data-toggle="modal" [attr.data-target]="'#l' + i">
+        Lesson {{i+1}}
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div *ngFor="let lesson of lessons, let i = index" class="modal fade" id="l{{i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <audio controls>
+          <source src="{{lesson.srcAudio}}" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+        <p>{{lesson.textEn}}</p>
+        <p>{{lesson.textRu}}</p>
+      </div>
+    </div>
+  </div>
+</div>
