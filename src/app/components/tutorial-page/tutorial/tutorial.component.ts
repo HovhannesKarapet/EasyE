@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {TutorialsService} from '../../../shared/tutorials.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-tutorial',
@@ -24,5 +26,16 @@ export class TutorialComponent implements OnInit {
     this.tutorialsService.getTutorials().subscribe((data) => {
       this.lessons = data[this.id - 1];
     });
+  }
+
+  @HostListener('document:click')
+  clickout() {
+    for (let i = 0; i < this.lessons.length; i++) {
+      $(`#l${i}`).on('hide.bs.modal', function () {
+        $('audio').each(function () {
+          this.pause();
+        });
+      });
+    }
   }
 }
