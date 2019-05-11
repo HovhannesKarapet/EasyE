@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 1000",
+    "server": "json-server --watch db.json",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
